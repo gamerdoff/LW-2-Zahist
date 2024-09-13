@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.sky {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: #87CEEB;
+    overflow: hidden;
+}
+
+/* Стиль для землі */
+.ground {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #008000;
+}
+
+.road {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: #4B4B4B;
+    overflow: hidden;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+.road-line {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 5px;
+    background: repeating-linear-gradient(
+        to right,
+        yellow 0,
+        yellow 50px,
+        transparent 50px,
+        transparent 100px
+    );
+    z-index: 1;
+}
+
+.grass {
+    bottom: 0;
+    width: 100%;
+    height: 500px;
+    background-color: green;
+}
+
+.car {
+    width: 150px;
+    height: 75px;
+    background: url('car.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 70px;
+    right: -200px;
+    transform: scaleX(-1);
+    z-index: 2;
+    animation: carMove 5s linear infinite;
+}
+
+@keyframes carMove {
+    0% {
+        right: -200px;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+.cloud {
+    width: 120px;
+    height: 60px;
+    background: url('cloud.png') no-repeat; /* Замініть на ваше зображення хмари */
+    background-size: contain;
+    position: absolute;
+    top: 20px;
+    left: -150px;
+    animation: cloudMove 15s linear infinite;
+}
+
+.cloud2 {
+    width: 140px;
+    height: 70px;
+    background: url('cloud.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50px;
+    left: -300px;
+    animation: cloudMove 20s linear infinite;
+}
+
+.cloud3 {
+    width: 100px;
+    height: 50px;
+    background: url('cloud.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 10px;
+    left: -500px;
+    animation: cloudMove 18s linear infinite;
+}
+
+.cloud4 {
+    width: 130px;
+    height: 65px;
+    background: url('cloud.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 80px;
+    left: -400px;
+    animation: cloudMove 25s linear infinite;
+}
+
+.cloud5 {
+    width: 110px;
+    height: 55px;
+    background: url('cloud.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 30px;
+    left: -250px;
+    animation: cloudMove 22s linear infinite;
+}
+
+@keyframes cloudMove {
+    0% {
+        left: -150px;
+    }
+    100% {
+        left: 100%;
+    }
+}
